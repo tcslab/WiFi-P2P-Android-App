@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="device_name" type="id" />
+    <item name="device_details" type="id" />
+    <item name="my_name" type="id" />
+    <item name="my_status" type="id" />
+    <item name="frag_list" type="id" />
+</resources>

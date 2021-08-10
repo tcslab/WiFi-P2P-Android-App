@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <Button
+        android:id="@+id/collectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:text="COLLECT"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/floodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/collectButton"
+        android:layout_marginLeft="80dp"
+        android:layout_alignBottom="@+id/collectButton"
+        android:text="REQUEST"
+        android:layout_toEndOf="@+id/collectButton"
+        android:layout_marginStart="80dp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectionStatus"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="20dp"
+        android:text="RESET" />
+
+    <ListView
+        android:id="@+id/peerListView"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/reset"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/holo_orange_light" />
+
+    <TextView
+        android:id="@+id/readMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/collectButton"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:text="Message"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/discoveryStatusIndicator"
+        android:src="@drawable/red_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_toLeftOf="@+id/reset"
+        android:layout_alignBottom="@+id/reset"
+        android:layout_marginEnd="50dp"
+        android:layout_toStartOf="@+id/reset"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:id="@+id/discoveryStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginRight="-30dp"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/discoveryStatusIndicator"
+        android:layout_alignLeft="@id/discoveryStatusIndicator"
+        android:layout_alignRight="@id/discoveryStatusIndicator"
+        android:gravity="center"
+        android:text="Discovery Active"
+        android:textSize="14sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_alignStart="@id/discoveryStatusIndicator"
+        android:layout_alignEnd="@id/discoveryStatusIndicator" />
+
+    <TextView
+        android:id="@+id/connectionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Connection Status"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>
